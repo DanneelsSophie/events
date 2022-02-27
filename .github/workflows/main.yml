@@ -31,8 +31,11 @@ jobs:
           node-version: 12
 
       # Install dependencies
-      - run: cd front
-      - run: npm install
+      - name: Install package front
+        working-directory: ./front
+        run: npm install
+        
+      - name: npm ru cover front
+        working-directory: ./front
+        run: npm run cover
 
-      # Run tests
-      - run: npm test:tdd
