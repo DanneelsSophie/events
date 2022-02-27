@@ -37,10 +37,13 @@ describe('<ModalFormContainer/>', () => {
   });
 
   it('should verify functions is called when render EventContainer', () => {
+    const handleCloseNotificationForm = jest.fn().mockReturnValue('handleCloseNotificationForm');
     const useNotificationFn = jest.fn().mockReturnValue({
       stateNotification: { type: 'success' },
       setStateNotification: jest.fn().mockReturnValue('setStateNotification'),
+      handleCloseNotificationForm: handleCloseNotificationForm,
     });
+
     const useCreateAnEventFn = jest.fn().mockReturnValue({
       createAnEvent: jest.fn().mockReturnValue('createAnEvent'),
     });
@@ -67,6 +70,7 @@ describe('<ModalFormContainer/>', () => {
         useFormFn={useFormFn}
         combineOnSubmitFn={combineOnSubmitFn}
         combineOnClearFn={combineOnClearFn}
+        handleCloseNotificationFormFn={handleCloseNotificationForm}
       />,
     );
 
@@ -82,8 +86,13 @@ describe('<ModalFormContainer/>', () => {
         onSubmitModalFormFn: expect.any(Function),
         openModalForm: true,
         stateNotification: { type: 'success' },
+        handleCloseNotificationFormFn: expect.any(Function),
       },
       {},
+    );
+
+    expect(ModalFormCmpt.mock.calls[0][0].handleCloseNotificationFormFn()).toBe(
+      'handleCloseNotificationForm',
     );
 
     expect(ModalFormCmpt.mock.calls[0][0].handleCloseModalFormFn()).toBe('handleCloseModalForm');

@@ -140,6 +140,8 @@ Feature: Création d'un évènement
         Then la modale d'ajout est fermée
         And une notification de succès est affichée
         And l'api getEvent est relancé
+        And je ferme la notification
+        And je ne vois plus la notification de succès
 
     Scenario: Ajout d'un évènement avec erreur
         Given je suis un utilisateur
@@ -149,6 +151,8 @@ Feature: Création d'un évènement
         When je clique sur "Sauvegarder"
         Then la modale d'ajout est fermée
         And une notification d'erreur est affichée
+        And je ferme la notification
+        And je ne vois plus la notification d'erreur
 
     Scenario: Annulation du formulaire
         Given je suis un utilisateur

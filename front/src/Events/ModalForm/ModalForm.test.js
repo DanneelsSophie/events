@@ -40,6 +40,7 @@ describe('<ModalForm/>', () => {
     isDisabledButtonForm: true,
     onSubmitModalFormFn: jest.fn(),
     onCancelModalFormFn: jest.fn(),
+    handleCloseNotificationFormFn: jest.fn(),
   };
 
   test('should ModalForm render with errors undefined', () => {
@@ -192,5 +193,24 @@ describe('<ModalForm/>', () => {
     });
     fireEvent.click(date);
     expect(stateModalForm.onChangeFormFn).toHaveBeenCalled();
+  });
+
+  test('should verify the function close is called when the user clicks on the close', () => {
+    const handleCloseNotificationFormFn = jest.fn();
+    const { container } = render(
+      <ModalForm
+        {...stateModalForm}
+        handleCloseNotificationFormFn={handleCloseNotificationFormFn}
+        stateNotification={{
+          open: true,
+          message: 'ajout avec échec',
+          type: 'error',
+        }}
+      />,
+    );
+    expect(screen.getByText('ajout avec échec')).toBeDefined();
+    const button = container.querySelector('[aria-label="Close"]');
+    fireEvent.click(button);
+    expect(handleCloseNotificationFormFn).toHaveBeenCalled();
   });
 });
