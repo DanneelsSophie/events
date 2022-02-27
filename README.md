@@ -28,6 +28,11 @@ Version :
 
 ## Dossier front :
 
+créer un fichier .env:
+
+    REACT_APP_BASE_API_URL=http://localhost:8080/v1
+    REACT_APP_PORT=3000
+
 ./front : ReactJS
     
     npm ci
@@ -37,8 +42,15 @@ Version :
 ./back: NestJS & bdd MONGODB
 
     npm ci 
+    
+créer un fichier .env: 
+
+    MONGO_TEST_CONNECTION_URI=mongodb://localhost/test
+    MONGO_CONNECTION_URI=mongodb://localhost/kumojin
+    PORT=8080
 
 # Lancement
+
 
 ## Dossier front :
 
