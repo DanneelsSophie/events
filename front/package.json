@@ -13,6 +13,7 @@
     "@mui/material": "~5.4.1",
     "date-fns": "^2.28.0",
     "dotenv": "~16.0.0",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.3",
     "jest": "^27.5.1",
     "react": "~17.0.2",
@@ -63,7 +64,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "start:test": "sh -ac '. .env.test;cross-env PORT=9002 react-scripts start'",
+    "start:test": "env-cmd -f .env.test cross-env PORT=9002 react-scripts start",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
     "test:e2e:ci": "concurrently --kill-others --success=first 'npm run start:test --progress=false --no-info' 'npm run test:e2e'"
