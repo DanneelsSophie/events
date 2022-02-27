@@ -113,3 +113,4 @@ And('je vois le champs {string} {string} avec {string}', (type, label, value) =>
     cy.get(`${type}[name="${label}"]`).should('have.value', value);
   }
 });
+//TODO : rajouter un check sur le post pour verifier les bons paramètres dans le body et rajouter le now oublie de ma part :)

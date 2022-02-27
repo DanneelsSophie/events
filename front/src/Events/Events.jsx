@@ -40,8 +40,8 @@ const CardEvent = ({ name, description, startDate, endDate, status }) => (
         </Typography>
 
         <Typography gutterBottom variant="h6" component="div">
-          du {format(new Date(startDate), 'eee dd MMM yyyy à h:mm (OOOO) ', { locale: fr })}
-          au {format(new Date(endDate), 'eee dd MMM yyyy à h:mm (OOOO)', { locale: fr })}
+          du {format(new Date(startDate), 'eee dd MMM yyyy à HH:mm (OOOO) ', { locale: fr })}
+          au {format(new Date(endDate), 'eee dd MMM yyyy à HH:mm (OOOO)', { locale: fr })}
         </Typography>
         <Typography variant="body2" color="text.secondary" align="center">
           {description}

@@ -143,9 +143,9 @@ exports[`<Events/> should Events render when API is OK with one event 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  mar. 14 avr. 1992 à 9:00 (GMT-07:00) 
+                  mar. 14 avr. 1992 à 09:00 (GMT-07:00) 
                   au 
-                  ven. 14 avr. 2000 à 9:00 (GMT-07:00)
+                  ven. 14 avr. 2000 à 09:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
@@ -249,9 +249,9 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  ven. 14 avr. 2000 à 9:00 (GMT-07:00) 
+                  ven. 14 avr. 2000 à 09:00 (GMT-07:00) 
                   au 
-                  mar. 14 avr. 2020 à 9:00 (GMT-07:00)
+                  mar. 14 avr. 2020 à 09:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
@@ -293,9 +293,9 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  sam. 14 avr. 2001 à 9:00 (GMT-07:00) 
+                  sam. 14 avr. 2001 à 09:00 (GMT-07:00) 
                   au 
-                  mer. 14 avr. 2021 à 9:00 (GMT-07:00)
+                  mer. 14 avr. 2021 à 09:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
@@ -337,9 +337,9 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  sam. 14 avr. 2001 à 9:00 (GMT-07:00) 
+                  sam. 14 avr. 2001 à 09:00 (GMT-07:00) 
                   au 
-                  dim. 14 avr. 2030 à 9:00 (GMT-07:00)
+                  dim. 14 avr. 2030 à 09:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
