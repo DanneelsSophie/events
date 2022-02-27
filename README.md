@@ -17,11 +17,56 @@ Le front-end doit permettre de :
 # Repo front :
 
 ./front : ReactJS
+cd front
+npm run start
 
 # Repo back :
 
 ./back: NestJS & bdd MONGODB
 
+Ne pas oublier avant tout de faire un npm install
+
 Lancement en local :
+Lancement de la base de données
+
+    cd back
+    sudo mongo
+ 
+Lancement de l'application
+
+    cd back
+    npm run start
 
 Lancement des tests :
+
+Front (cd front)
+npm run cover (tdd) front avec le coverage seulement pour les tus
+
+lancement des tests e2e, utlisation de cypress (lancement de deux processus) (j'ai laissé les vidéos en cas de problème de lancement de celui-ci)
+
+    npm run start:test 
+    npm run cy:open
+
+Back :
+
+    npm run test 
+    npm run test:e2e
+
+---------------------------------------------------
+Ce qui reste à faire :
+
+- brancher un sonar pour réutiliser lcov et visualiser le taux de coverage et voir si des issues autre que ce que remonte le linter,
+- j'ai branché un snyk (pour vérifier les vulnérabilités dans les dépendances), il faudrait rajouter même si sonar le fait actuellement un outil qui check les failles owasp 
+- les différents environnements 
+-  Écrivant les Dockerfile qui construisent les applications front-end et back-end
+- Écrivant les GitHub Action pour tester, builder et déployer dans Kubernetes
+- Écrivant les manifests Kubernetes pour déployer les 2 applications avec un Ingress, on part du principe que le cluster possède un Nginx Ingress Controller
+- la livedoc (les features sont faites, il faudrait mettre un specflow pour permettre d'heberger) d'ailleurs il y a un swagger qui est fait sur le côté back
+
+Version : 
+
+    npm --version
+    6.14.10
+    node --version
+    v14.15.4
+    MongoDB server version: 4.0.3
