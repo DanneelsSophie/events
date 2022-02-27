@@ -23,27 +23,30 @@ Version :
     node --version
     v14.15.4
     MongoDB server version: 4.0.3
+    
+# Installation 
 
-# Dossier front :
+## Dossier front :
 
 ./front : ReactJS
     
     npm ci
 
-# Dossier back :
+## Dossier back :
 
 ./back: NestJS & bdd MONGODB
 
     npm ci 
 
+# Lancement
 
-# Dossier front :
+## Dossier front :
 
 ./front : ReactJS
 cd front
 npm run start
 
-# Dossier back :
+## Dossier back :
 
 ./back: NestJS & bdd MONGODB
 
