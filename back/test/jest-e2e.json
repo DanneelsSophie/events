@@ -2,8 +2,17 @@
   "moduleFileExtensions": ["js", "json", "ts"],
   "rootDir": ".",
   "testEnvironment": "node",
-  "testRegex": ".e2e-spec.ts$",
+  "testMatch": ["**/*.e2e-spec.ts", "**/*.e2e-steps.ts"],
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coveragePathIgnorePatterns": ["<rootDir>/src/**/*.{ts}"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 87,
+      "lines": 74,
+      "statements": 75
+    }
   }
 }

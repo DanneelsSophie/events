@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EventsContainer/> should verify functions is called when render EventContainer 1`] = `
+<body>
+  <div>
+    EventsCmpt
+  </div>
+</body>
+`;
+
+exports[`<EventsContainer/> should verify functions is called with empty array when render EventContainer and events is undefined 1`] = `
+<body>
+  <div>
+    EventsCmpt
+  </div>
+</body>
+`;

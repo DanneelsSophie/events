@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalFormContainer/> should verify functions is called when render EventContainer 1`] = `
+<body>
+  <div>
+    ModalFormCmpt
+  </div>
+</body>
+`;

@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Events/> should Events render when API is KO or Loading displays a message 1`] = `
+<body>
+  <div>
+    <div
+      class="events"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          >
+            Kumojin
+          </h6>
+        </div>
+      </header>
+      <h1>
+        ERROR
+      </h1>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Events/> should Events render when API is OK with empty list events 1`] = `
+<body>
+  <div>
+    <div
+      class="events"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          >
+            Kumojin
+          </h6>
+        </div>
+      </header>
+      <div>
+        <div
+          class="events__list"
+        />
+        <p>
+          ModalForm
+        </p>
+        <div
+          class="events__button"
+        >
+          <button
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Ajouter un évènement
+            <span
+              class="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="AddIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Events/> should Events render when API is OK with one event 1`] = `
+<body>
+  <div>
+    <div
+      class="events"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          >
+            Kumojin
+          </h6>
+        </div>
+      </header>
+      <div>
+        <div
+          class="events__list"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
+            >
+              <img
+                alt="image évènement"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                src="./event.jpg"
+              />
+              <span
+                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
+              >
+                <span
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
+                >
+                  en cours
+                </span>
+              </span>
+              <div
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+              >
+                nom de l'évènement
+                <div
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+                >
+                  du 
+                  mar. 14 avr. 1992 à 6:00 (GMT+02:00) 
+                  au 
+                  ven. 14 avr. 2000 à 6:00 (GMT+02:00)
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+                >
+                  Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          ModalForm
+        </p>
+        <div
+          class="events__button"
+        >
+          <button
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Ajouter un évènement
+            <span
+              class="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="AddIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Events/> should Events render when API is OK with three events 1`] = `
+<body>
+  <div>
+    <div
+      class="events"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          >
+            Kumojin
+          </h6>
+        </div>
+      </header>
+      <div>
+        <div
+          class="events__list"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
+            >
+              <img
+                alt="image évènement"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                src="./event.jpg"
+              />
+              <span
+                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
+              >
+                <span
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
+                >
+                  en cours
+                </span>
+              </span>
+              <div
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+              >
+                nom de l'évènement
+                <div
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+                >
+                  du 
+                  ven. 14 avr. 2000 à 6:00 (GMT+02:00) 
+                  au 
+                  jeu. 14 avr. 2050 à 6:00 (GMT+02:00)
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+                >
+                  Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
+            >
+              <img
+                alt="image évènement"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                src="./event.jpg"
+              />
+              <span
+                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
+              >
+                <span
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-12slcdh-MuiBadge-badge"
+                >
+                  passé
+                </span>
+              </span>
+              <div
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+              >
+                nom de l'évènement 1
+                <div
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+                >
+                  du 
+                  mar. 14 avr. 1992 à 6:00 (GMT+02:00) 
+                  au 
+                  ven. 14 avr. 2000 à 6:00 (GMT+02:00)
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+                >
+                  un peu plus long comme description
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
+            >
+              <img
+                alt="image évènement"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                src="./event.jpg"
+              />
+              <span
+                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
+              >
+                <span
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSuccess MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-vnvyba-MuiBadge-badge"
+                >
+                  futur
+                </span>
+              </span>
+              <div
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+              >
+                nom de l'évènement 2
+                <div
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+                >
+                  du 
+                  jeu. 14 avr. 2050 à 6:00 (GMT+02:00) 
+                  au 
+                  ven. 14 avr. 2051 à 6:00 (GMT+02:00)
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+                >
+                  court description
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          ModalForm
+        </p>
+        <div
+          class="events__button"
+        >
+          <button
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Ajouter un évènement
+            <span
+              class="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="AddIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

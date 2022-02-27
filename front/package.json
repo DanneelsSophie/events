@@ -2,20 +2,70 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
+    "@date-io/date-fns": "^2.13.1",
+    "@emotion/react": "~11.7.1",
+    "@emotion/styled": "~11.6.0",
+    "@material-ui/lab": "~4.0.0-alpha.60",
+    "@mui/icons-material": "~5.4.1",
+    "@mui/lab": "~5.0.0-alpha.68",
+    "@mui/material": "~5.4.1",
+    "date-fns": "^2.28.0",
+    "dotenv": "~16.0.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-query": "~3.34.15",
+    "react-scripts": "~5.0.0",
+    "sass": "~1.49.7",
+    "web-vitals": "~2.1.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@cypress/react": "^5.12.3",
+    "@cypress/webpack-dev-server": "^1.8.1",
+    "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "airbnb": "^0.0.2",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.5.1",
+    "babel-preset-jest": "^27.5.1",
+    "cross-env": "^7.0.3",
+    "cross-fetch": "^3.1.5",
+    "cypress": "^9.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest-cucumber": "^3.0.1",
+    "jest-watch-typeahead": "^0.6.5",
+    "msw": "^0.38.1",
+    "prettier": "^2.5.1",
+    "prop-types": "^15.8.1",
+    "react-test-renderer": "^17.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "mock-api": "node api/routes.js",
+    "test:bdd:old": "sh -ac '. .env.test;cross-env REACT_ENV=test jest --env=jsdom --config ./jest.config.json --env-file=.env.test'",
+    "test:tdd": "sh -ac '. .env.test; react-scripts test  --no-cache --verbose'",
+    "cover": "npm run test:tdd -- --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
+    "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
+    "start:test": "sh -ac '. .env.test;cross-env PORT=9002 react-scripts start'",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run",
+    "test:e2e:ci": "concurrently --kill-others --success=first 'npm run start:test --progress=false --no-info' 'npm run test:e2e'"
   },
   "eslintConfig": {
     "extends": [
@@ -33,6 +83,32 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/",
+      "!<rootDir>/src/**/index.js",
+      "!<rootDir>/src/reportWebVitals.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 88,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover"
     ]
   }
 }
