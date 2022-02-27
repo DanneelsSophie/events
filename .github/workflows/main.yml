@@ -35,7 +35,15 @@ jobs:
         working-directory: ./front
         run: npm install
         
-      - name: npm ru cover front
+      - name: npm run cover front
         working-directory: ./front
         run: npm run cover
+        
+      - name: Install package back
+        working-directory: ./back
+        run: npm install
+        
+      - name: npm run cover back
+        working-directory: ./back
+        run: npm run test:cov
 
