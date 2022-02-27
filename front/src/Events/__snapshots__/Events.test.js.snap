@@ -139,9 +139,9 @@ exports[`<Events/> should Events render when API is OK with one event 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  mar. 14 avr. 1992 à 6:00 (GMT+02:00) 
+                  mar. 14 avr. 1992 à 9:00 (GMT-07:00) 
                   au 
-                  ven. 14 avr. 2000 à 6:00 (GMT+02:00)
+                  ven. 14 avr. 2000 à 9:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
@@ -228,9 +228,9 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
                 class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
               >
                 <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-12slcdh-MuiBadge-badge"
                 >
-                  en cours
+                  passé
                 </span>
               </span>
               <div
@@ -241,54 +241,14 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  ven. 14 avr. 2000 à 6:00 (GMT+02:00) 
+                  ven. 14 avr. 2000 à 9:00 (GMT-07:00) 
                   au 
-                  jeu. 14 avr. 2050 à 6:00 (GMT+02:00)
+                  mar. 14 avr. 2020 à 9:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
                 >
                   Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
-          >
-            <div
-              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
-            >
-              <img
-                alt="image évènement"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
-                src="./event.jpg"
-              />
-              <span
-                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
-              >
-                <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-12slcdh-MuiBadge-badge"
-                >
-                  passé
-                </span>
-              </span>
-              <div
-                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
-              >
-                nom de l'évènement 1
-                <div
-                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
-                >
-                  du 
-                  mar. 14 avr. 1992 à 6:00 (GMT+02:00) 
-                  au 
-                  ven. 14 avr. 2000 à 6:00 (GMT+02:00)
-                </div>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
-                >
-                  un peu plus long comme description
                 </p>
               </div>
             </div>
@@ -316,19 +276,59 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
               <div
                 class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
               >
-                nom de l'évènement 2
+                nom de l'évènement 1
                 <div
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
                   du 
-                  jeu. 14 avr. 2050 à 6:00 (GMT+02:00) 
+                  sam. 14 avr. 2001 à 9:00 (GMT-07:00) 
                   au 
-                  ven. 14 avr. 2051 à 6:00 (GMT+02:00)
+                  mer. 14 avr. 2021 à 9:00 (GMT-07:00)
                 </div>
                 <p
                   class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
                 >
-                  court description
+                  Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root events__list__event css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiCardContent-root css-1u0k5eo-MuiCardContent-root"
+            >
+              <img
+                alt="image évènement"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                src="./event.jpg"
+              />
+              <span
+                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
+              >
+                <span
+                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
+                >
+                  en cours
+                </span>
+              </span>
+              <div
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+              >
+                nom de l'évènement 1
+                <div
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+                >
+                  du 
+                  sam. 14 avr. 2001 à 9:00 (GMT-07:00) 
+                  au 
+                  dim. 14 avr. 2030 à 9:00 (GMT-07:00)
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+                >
+                  Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee
                 </p>
               </div>
             </div>
