@@ -31,7 +31,8 @@ function ModalFormContainer({
   combineOnSubmitFn,
   combineOnClearFn,
 }) {
-  const { setStateNotification, stateNotification } = useNotificationFn({});
+  const { setStateNotification, stateNotification, handleCloseNotificationForm } =
+    useNotificationFn({});
   const { createAnEvent } = useCreateAnEventFn({
     refetchGetEvents,
     setStateNotification,
@@ -59,6 +60,7 @@ function ModalFormContainer({
       onCancelModalFormFn={onCancel}
       onSubmitModalFormFn={onSubmit}
       handleCloseModalFormFn={handleCloseModalFormFn}
+      handleCloseNotificationFormFn={handleCloseNotificationForm}
       stateNotification={stateNotification}
     />
   );

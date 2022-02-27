@@ -9,7 +9,8 @@ import {
   Toolbar,
   Button,
   CardMedia,
-  Badge,
+  Chip,
+  Stack,
 } from '@mui/material';
 import { fr } from 'date-fns/locale';
 import { format } from 'date-fns';
@@ -23,21 +24,21 @@ const CardEvent = ({ name, description, startDate, endDate, status }) => (
     <CardContent sx={{ display: 'flex' }}>
       <CardMedia
         component="img"
-        sx={{ width: '20%', marginRight: '10px' }}
+        sx={{ minWidth: '100px', width: '20%', marginRight: '10px' }}
         image="./event.jpg"
         alt="image évènement"
       />
-      <Badge
-        className="events__list__event__badge"
-        color={STATUS[status].color}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
-        }}
-        badgeContent={STATUS[status].text}
-      />
-      <Typography gutterBottom variant="h4" component="div">
-        {name}
+      <Stack direction="column" spacing={2}>
+        <Typography gutterBottom variant="h4" component="div">
+          {name}
+          <Chip
+            className="events__list__event__badge"
+            color={STATUS[status].color}
+            label={STATUS[status].text}
+            size="small"
+          />
+        </Typography>
+
         <Typography gutterBottom variant="h6" component="div">
           du {format(new Date(startDate), 'eee dd MMM yyyy à h:mm (OOOO) ', { locale: fr })}
           au {format(new Date(endDate), 'eee dd MMM yyyy à h:mm (OOOO)', { locale: fr })}
@@ -45,7 +46,7 @@ const CardEvent = ({ name, description, startDate, endDate, status }) => (
         <Typography variant="body2" color="text.secondary" align="center">
           {description}
         </Typography>
-      </Typography>
+      </Stack>
     </CardContent>
   </Card>
 );

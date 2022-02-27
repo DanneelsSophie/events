@@ -34,11 +34,11 @@ Then('une modale apparaît', () => {
 });
 
 And('le titre de la modale est {string}', titre => {
-  cy.get('.modal__form-body').contains(titre);
+  cy.get('.modal__form__body').contains(titre);
 });
 
 And('un champ avec le label : {string}', label => {
-  cy.get('.modal__form-body').contains(label);
+  cy.get('.modal__form__body').contains(label);
 });
 
 And('le bouton {string} est activé', label => {
@@ -79,17 +79,32 @@ And('une notification de succès est affichée', titre => {
 And("une notification d'erreur est affichée", titre => {
   cy.contains('Veuillez contacter le service technique !');
 });
+And('je ferme la notification', titre => {
+  cy.get('button[aria-label="Close"]').click();
+});
+
+And('je ne vois plus la notification de succès', () => {
+  cy.get('body')
+    .not('.event_notification')
+    .should('not.contain', "l'ajout de l'évènement Meet-up est un succès");
+});
+
+And("je ne vois plus la notification d'erreur", () => {
+  cy.get('body')
+    .not('.event_notification')
+    .should('not.contain', 'Veuillez contacter le service technique !');
+});
 
 And("l'api getEvent est relancé", () => {
   cy.intercept('GET', 'http://localhost:2000/v1/events');
 });
 
 And("le message d'erreur {string} est present", label => {
-  cy.get('.modal__form-body').contains(label);
+  cy.get('.modal__form__body').contains(label);
 });
 
 And("le message d'erreur {string} n'est pas present", label => {
-  cy.get('body').not('.modal__form-body').should('not.contain', label);
+  cy.get('body').not('.modal__form__body').should('not.contain', label);
 });
 
 And('je vois le champs {string} {string} avec {string}', (type, label, value) => {

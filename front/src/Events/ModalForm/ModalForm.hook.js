@@ -21,12 +21,6 @@ import {
 } from './constants';
 import { API_ERROR_MESSAGE } from '../constants';
 
-/*   
- if (process.env.REACT_ENV === 'test') {
-  jest.useFakeTimers().setSystemTime(new Date('2020-02-20').getTime());
-}
-  */
-
 const now = () => {
   const d = new Date();
   d.setSeconds(0);
@@ -256,5 +250,6 @@ const initStateNotification = {
 
 export const useNotification = () => {
   const [stateNotification, setStateNotification] = useState(initStateNotification);
-  return { setStateNotification, stateNotification };
+  const handleCloseNotificationForm = () => setStateNotification(initStateNotification);
+  return { setStateNotification, stateNotification, handleCloseNotificationForm };
 };

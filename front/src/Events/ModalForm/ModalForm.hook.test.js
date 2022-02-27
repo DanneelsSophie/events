@@ -472,6 +472,22 @@ describe('ModalFormHook', () => {
             message: 'messageTest',
           });
         });
+        it('should change the inital state when handleCloseNotificationForm is called', () => {
+          const { result } = renderHook(() => useNotification({}));
+          act(() => {
+            result.current.setStateNotification({
+              open: true,
+              type: 'updatedType',
+              message: 'messageTest',
+            }),
+              result.current.handleCloseNotificationForm();
+          });
+          expect(result.current.stateNotification).toStrictEqual({
+            open: false,
+            type: 'success',
+            message: '',
+          });
+        });
       });
     });
   });

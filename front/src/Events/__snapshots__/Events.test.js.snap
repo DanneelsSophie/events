@@ -119,22 +119,26 @@ exports[`<Events/> should Events render when API is OK with one event 1`] = `
             >
               <img
                 alt="image évènement"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-5cw9ez-MuiCardMedia-root"
                 src="./event.jpg"
               />
-              <span
-                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
-              >
-                <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
-                >
-                  en cours
-                </span>
-              </span>
               <div
-                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                class="css-1p5q5e5-MuiStack-root"
               >
-                nom de l'évènement
+                <div
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                >
+                  nom de l'évènement
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary events__list__event__badge css-14krrdx-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                    >
+                      en cours
+                    </span>
+                  </div>
+                </div>
                 <div
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
@@ -221,22 +225,26 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
             >
               <img
                 alt="image évènement"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-5cw9ez-MuiCardMedia-root"
                 src="./event.jpg"
               />
-              <span
-                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
-              >
-                <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-12slcdh-MuiBadge-badge"
-                >
-                  passé
-                </span>
-              </span>
               <div
-                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                class="css-1p5q5e5-MuiStack-root"
               >
-                nom de l'évènement
+                <div
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                >
+                  nom de l'évènement
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorSecondary MuiChip-filledSecondary events__list__event__badge css-11x7sap-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                    >
+                      passé
+                    </span>
+                  </div>
+                </div>
                 <div
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
@@ -261,22 +269,26 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
             >
               <img
                 alt="image évènement"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-5cw9ez-MuiCardMedia-root"
                 src="./event.jpg"
               />
-              <span
-                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
-              >
-                <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSuccess MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-vnvyba-MuiBadge-badge"
-                >
-                  futur
-                </span>
-              </span>
               <div
-                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                class="css-1p5q5e5-MuiStack-root"
               >
-                nom de l'évènement 1
+                <div
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                >
+                  nom de l'évènement 1
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorSuccess MuiChip-filledSuccess events__list__event__badge css-1srradg-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                    >
+                      futur
+                    </span>
+                  </div>
+                </div>
                 <div
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >
@@ -301,22 +313,26 @@ exports[`<Events/> should Events render when API is OK with three events 1`] = `
             >
               <img
                 alt="image évènement"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-efkekc-MuiCardMedia-root"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-5cw9ez-MuiCardMedia-root"
                 src="./event.jpg"
               />
-              <span
-                class="MuiBadge-root events__list__event__badge css-1c32n2y-MuiBadge-root"
-              >
-                <span
-                  class="MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight css-1frogym-MuiBadge-badge"
-                >
-                  en cours
-                </span>
-              </span>
               <div
-                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                class="css-1p5q5e5-MuiStack-root"
               >
-                nom de l'évènement 1
+                <div
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1vw6mcs-MuiTypography-root"
+                >
+                  nom de l'évènement 1
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary events__list__event__badge css-14krrdx-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                    >
+                      en cours
+                    </span>
+                  </div>
+                </div>
                 <div
                   class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
                 >

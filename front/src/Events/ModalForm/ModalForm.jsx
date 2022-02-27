@@ -44,6 +44,7 @@ const ModalForm = ({
   openModalForm,
   onSubmitModalFormFn,
   onCancelModalFormFn,
+  handleCloseNotificationFormFn,
 }) => (
   <>
     {stateNotification.open ? (
@@ -52,7 +53,12 @@ const ModalForm = ({
         open={stateNotification.open}
         key="topright"
       >
-        <Alert severity={stateNotification.type} sx={{ width: '100%' }}>
+        <Alert
+          className="event__notification"
+          severity={stateNotification.type}
+          sx={{ width: '100%' }}
+          onClose={handleCloseNotificationFormFn}
+        >
           {stateNotification.message}
         </Alert>
       </Snackbar>
@@ -63,8 +69,8 @@ const ModalForm = ({
       className="modal__form"
       open={openModalForm}
       onClose={handleCloseModalFormFn}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
+      aria-labelledby="modal__form"
+      aria-describedby="modal__form"
     >
       <Box
         sx={{
@@ -81,8 +87,8 @@ const ModalForm = ({
         }}
         className="Form"
       >
-        <Stack className="modal__form-body" mt={2} direction="column" spacing={3}>
-          <Typography id="modal-modal-title" variant="h5" component="h2">
+        <Stack className="modal__form__body" mt={2} direction="column" spacing={3}>
+          <Typography id="modal__form__body__title" variant="h5" component="h2">
             {TITLE_MODAL}
           </Typography>
           <TextField
@@ -196,6 +202,7 @@ ModalForm.propTypes = {
   openModalForm: PropTypes.bool.isRequired,
   onSubmitModalFormFn: PropTypes.func.isRequired,
   onCancelModalFormFn: PropTypes.func.isRequired,
+  handleCloseNotificationFormFn: PropTypes.func.isRequired,
 };
 ModalForm.defaultProps = {};
 
