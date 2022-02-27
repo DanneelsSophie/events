@@ -83,7 +83,7 @@ npm run cover (tdd) front avec le coverage seulement pour les tus
 lancement des tests e2e, utlisation de cypress (lancement de deux processus) (j'ai laissé les vidéos en cas de problème de lancement de celui-ci)
 
     npm run start:test 
-    npm run cy:open
+    npm run cypress:open
 
 Back :
 
