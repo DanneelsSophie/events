@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Application de gestion d’événements
+
+// Testing
+// jest launch bdd
+// coverage
+// linter react
+// mettre un sonar ?
+// environnement ?
+// dockerisation
+
+Optionnel: une fois cette application terminée prépare son déploiement en :
+
+    Écrivant les Dockerfile qui construisent les applications front-end et back-end
+    Écrivant les GitHub Action pour tester, builder et déployer dans Kubernetes
+    Écrivant les manifests Kubernetes pour déployer les 2 applications avec un Ingress, on part du principe que le cluster possède un Nginx Ingress Controller
+
+Considère que cette application est la base d’un nouveau produit et qu’il faut qu’elle soit codée dans les règles de l’art (sous-entendu intégration de tests techniques). Tu peux bien entendu faire des compromis sur l’implémentation mais sois prêt à en discuter et à les justifier.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +84,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+//config jest
+// config prettier
+//tests
+// docker ?
+//sonar ?
+//specflow ?
+// coverage
+//environnement
+espace ?

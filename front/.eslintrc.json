@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": ["react-app", "airbnb", "prettier"],
+
+  "plugins": ["react-hooks", "prettier", "react"],
+
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/forbid-prop-types": 1,
+    "react/function-component-definition": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "no-extra-boolean-cast": 0,
+    "new-cap": 0
+  },
+
+  "parser": "@babel/eslint-parser",
+
+  "ignorePatterns": ["src/**/*.test.js", "src/**/*.steps.js", "src/**/index.js"]
+}

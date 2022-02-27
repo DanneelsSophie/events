@@ -1,0 +1,16 @@
+.events {
+  &__list__event {
+    height: 100%;
+    width: 95%;
+    border: solid;
+    margin: 10px;
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+}
