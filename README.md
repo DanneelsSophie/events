@@ -28,6 +28,8 @@ Version :
 
 ## Dossier front :
 
+     cd ./front
+     
 créer un fichier .env:
 
     REACT_APP_BASE_API_URL=http://localhost:8080/v1
@@ -35,16 +37,17 @@ créer un fichier .env:
 
 ./front : ReactJS
 
+    cd ./front
     npm ci
 
 ## Dossier back :
 
 ./back: NestJS & bdd MONGODB
-
+    cd ./back
     npm ci
 
-créer un fichier .env:
-
+créer un fichier .env :
+    cd ./back
     MONGO_TEST_CONNECTION_URI=mongodb://localhost/test
     MONGO_CONNECTION_URI=mongodb://localhost/kumojin
     PORT=8080
@@ -54,8 +57,9 @@ créer un fichier .env:
 ## Dossier front :
 
 ./front : ReactJS
-cd front
-npm run start
+
+    cd ./front
+    npm run start
 
 ## Dossier back :
 
@@ -66,12 +70,12 @@ Ne pas oublier avant tout de faire un npm install
 Lancement en local :
 Lancement de la base de données
 
-    cd back
+    cd ./back
     sudo mongo
 
 Lancement de l'application
 
-    cd back
+    cd ./back
     npm run start
 
 Lancement des tests :
@@ -80,20 +84,20 @@ Front (cd front)
 npm run cover (tdd) front avec le coverage seulement pour les tus
 
 lancement des tests e2e, utlisation de cypress (lancement de deux processus) (j'ai laissé les vidéos en cas de problème de lancement de celui-ci)
-
+cypress se lancera sur le port 2000 pour l'API veuillez à changer aussi dans les fichiers dans le dossier cypress/integration si vous souhaitez le modifier et le .env.test
+    
+    cd ./front
     npm run start:test
     npm run cypress:open
 
 ou
 
-    npm run test:e2e:ci
-
-ou
-
+    cd ./front
     npm run test:e2e:ci
 
 Back :
 
+    cd ./back
     npm run test
     npm run test:e2e
 
