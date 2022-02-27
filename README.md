@@ -14,13 +14,36 @@ Le front-end doit permettre de :
     Créer un événement
     Lister les événements (optionnel)
 
-# Repo front :
+Pré-requis : 
+
+Version : 
+
+    npm --version
+    6.14.10
+    node --version
+    v14.15.4
+    MongoDB server version: 4.0.3
+
+# Dossier front :
+
+./front : ReactJS
+    
+    npm ci
+
+# Dossier back :
+
+./back: NestJS & bdd MONGODB
+
+    npm ci 
+
+
+# Dossier front :
 
 ./front : ReactJS
 cd front
 npm run start
 
-# Repo back :
+# Dossier back :
 
 ./back: NestJS & bdd MONGODB
 
@@ -63,10 +86,4 @@ Ce qui reste à faire :
 - Écrivant les manifests Kubernetes pour déployer les 2 applications avec un Ingress, on part du principe que le cluster possède un Nginx Ingress Controller
 - la livedoc (les features sont faites, il faudrait mettre un specflow pour permettre d'heberger) d'ailleurs il y a un swagger qui est fait sur le côté back
 
-Version : 
 
-    npm --version
-    6.14.10
-    node --version
-    v14.15.4
-    MongoDB server version: 4.0.3
