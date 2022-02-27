@@ -31,7 +31,7 @@ Lancement de la base de données
 
     cd back
     sudo mongo
- 
+
 Lancement de l'application
 
     cd back
@@ -44,26 +44,31 @@ npm run cover (tdd) front avec le coverage seulement pour les tus
 
 lancement des tests e2e, utlisation de cypress (lancement de deux processus) (j'ai laissé les vidéos en cas de problème de lancement de celui-ci)
 
-    npm run start:test 
+    npm run start:test
     npm run cy:open
+
+ou
+
+    npm run test:e2e:ci
 
 Back :
 
-    npm run test 
+    npm run test
     npm run test:e2e
 
----------------------------------------------------
+---
+
 Ce qui reste à faire :
 
 - brancher un sonar pour réutiliser lcov et visualiser le taux de coverage et voir si des issues autre que ce que remonte le linter,
-- j'ai branché un snyk (pour vérifier les vulnérabilités dans les dépendances), il faudrait rajouter même si sonar le fait actuellement un outil qui check les failles owasp 
-- les différents environnements 
--  Écrivant les Dockerfile qui construisent les applications front-end et back-end
+- j'ai branché un snyk (pour vérifier les vulnérabilités dans les dépendances), il faudrait rajouter même si sonar le fait actuellement un outil qui check les failles owasp
+- les différents environnements
+- Écrivant les Dockerfile qui construisent les applications front-end et back-end
 - Écrivant les GitHub Action pour tester, builder et déployer dans Kubernetes
 - Écrivant les manifests Kubernetes pour déployer les 2 applications avec un Ingress, on part du principe que le cluster possède un Nginx Ingress Controller
 - la livedoc (les features sont faites, il faudrait mettre un specflow pour permettre d'heberger) d'ailleurs il y a un swagger qui est fait sur le côté back
 
-Version : 
+Version :
 
     npm --version
     6.14.10
