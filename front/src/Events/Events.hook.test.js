@@ -65,7 +65,9 @@ describe('EventsHook', () => {
         });
 
         await expect(getEvents({ fetchFn })).resolves.toBe('Santane');
-        expect(fetchFn).toHaveBeenCalledWith('http://localhost:2000/v1/events', { method: 'GET' });
+        expect(fetchFn).toHaveBeenCalledWith(`${process.env.REACT_APP_BASE_API_URL}/events`, {
+          method: 'GET',
+        });
       });
 
       it('should return the data when the fetchGetEvents is successed', async () => {

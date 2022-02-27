@@ -1,4 +1,6 @@
 import { render, screen, getByText, fireEvent } from '@testing-library/react';
+import timezoneMock from 'timezone-mock';
+
 import Events from './Events';
 
 describe('<Events/>', () => {
@@ -9,6 +11,14 @@ describe('<Events/>', () => {
   function ModalFormCmpt() {
     return <p>ModalForm</p>;
   }
+
+  beforeAll(() => {
+    timezoneMock.register('US/Pacific');
+  });
+
+  afterAll(() => {
+    timezoneMock.unregister();
+  });
 
   it('should Events render when API is KO or Loading displays a message', () => {
     const { baseElement } = render(
@@ -73,28 +83,30 @@ describe('<Events/>', () => {
         events={[
           {
             _id: '0',
-            status: 'CURRENT',
+            status: 'PAST',
             name: "nom de l'évènement",
             startDate: '2000-04-14T16:00:00.000Z',
-            endDate: '2050-04-14T16:00:00.000Z',
+            endDate: '2020-04-14T16:00:00.000Z',
             description:
               'Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee',
           },
           {
             _id: '1',
-            status: 'PAST',
+            status: 'NEXT',
             name: "nom de l'évènement 1",
-            startDate: '1992-04-14T16:00:00.000Z',
-            endDate: '2000-04-14T16:00:00.000Z',
-            description: 'un peu plus long comme description',
+            startDate: '2001-04-14T16:00:00.000Z',
+            endDate: '2021-04-14T16:00:00.000Z',
+            description:
+              'Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee',
           },
           {
-            _id: '12',
-            status: 'NEXT',
-            name: "nom de l'évènement 2",
-            startDate: '2050-04-14T16:00:00.000Z',
-            endDate: '2051-04-14T16:00:00.000Z',
-            description: 'court description',
+            _id: '2',
+            status: 'CURRENT',
+            name: "nom de l'évènement 1",
+            startDate: '2001-04-14T16:00:00.000Z',
+            endDate: '2030-04-14T16:00:00.000Z',
+            description:
+              'Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee',
           },
         ]}
         messageApi=""
