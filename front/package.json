@@ -57,7 +57,7 @@
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "mock-api": "node api/routes.js",
     "test:bdd:old": "sh -ac '. .env.test;cross-env REACT_ENV=test jest --env=jsdom --config ./jest.config.json --env-file=.env.test'",
-    "test:tdd": "sh -ac '. .env.test; react-scripts test  --no-cache --verbose'",
+    "test:tdd": "react-scripts test  --no-cache --verbose",
     "cover": "npm run test:tdd -- --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
