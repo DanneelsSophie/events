@@ -7,7 +7,7 @@ import { MongooseModule, getConnectionToken } from '@nestjs/mongoose';
 import { APP_PIPE } from '@nestjs/core';
 import { ValidationPipe } from '../src/pipes/validation.pipe';
 import { Connection } from 'mongoose';
-import { Status, Event } from '../src/events/schemas/event.schemas';
+import { Event } from '../src/events/schemas/event.schemas';
 import { ConfigModule } from '@nestjs/config';
 
 const featureCreate = loadFeature('./test/event-create.feature');
@@ -52,21 +52,18 @@ describe('app - EventsController (e2e)', () => {
         description: 'Quels sont les outils que nous pouvons utiliser permettant avoir un ecosystème',
         startDate: new Date('2010-04-13T00:00:00.000+08:00'),
         endDate: new Date('2010-04-15T00:00:00.000+08:00'),
-        status: Status.Past,
       },
       'evenement futur': {
         name: 'evenement futur',
         description: 'Quels sont les outils que nous pouvons utiliser permettant avoir un ecosystème',
         startDate: new Date('2199-04-13T00:00:00.000+08:00'),
         endDate: new Date('2199-04-15T00:00:00.000+08:00'),
-        status: Status.Next,
       },
       'evenement current': {
         name: 'evenement current',
         description: 'Quels sont les outils que nous pouvons utiliser permettant avoir un ecosystème',
         startDate: new Date('2000-04-13T00:00:00.000+08:00'),
         endDate: new Date('2199-04-15T00:00:00.000+08:00'),
-        status: Status.Current,
       },
       a1234567890123456789012345678901: {
         name: 'a1234567890123456789012345678901',
@@ -74,7 +71,6 @@ describe('app - EventsController (e2e)', () => {
           'Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte défiee',
         startDate: new Date('2010-04-13T00:00:00.000+08:00'),
         endDate: new Date('2010-04-15T00:00:00.000+08:00'),
-        status: Status.Past,
       },
     };
 
@@ -100,13 +96,12 @@ describe('app - EventsController (e2e)', () => {
         await (app.get(getConnectionToken()) as Connection).db
           .collection('events')
           .findOne({ name: ObjectCreatedEvents[nameEvent.replace('"', '').replace('"', '').trim()].name })
-          .then(({ description, endDate, name, startDate, status }) => {
+          .then(({ description, endDate, name, startDate }) => {
             expect(ObjectCreatedEvents[name]).toEqual({
               description,
               endDate,
               name,
               startDate,
-              status,
             });
           });
       });
@@ -148,14 +143,12 @@ describe('app - EventsController (e2e)', () => {
         description: 'Quels sont les outils que nous pouvons utiliser permettant avoir un ecosystème',
         startDate: new Date('2020-04-13T00:00:00.000+08:00'),
         endDate: new Date('2020-04-15T00:00:00.000+08:00'),
-        status: Status.Past,
       },
       {
         name: 'Meet-Up VueJS',
         description: 'Nous allons voir comment créer un site todo',
         startDate: new Date('2025-04-15T21:00:00.000+01:00'),
         endDate: new Date('2025-04-15T20:00:00.000+01:00'),
-        status: Status.Next,
       },
     ];
 
@@ -181,7 +174,6 @@ describe('app - EventsController (e2e)', () => {
             startDate: event.startDate,
             endDate: event.endDate,
             name: event.name,
-            status: event.status,
           })),
         );
         JSON.parse(response.text).forEach(event => {
