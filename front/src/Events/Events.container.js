@@ -7,7 +7,7 @@ import { useModal, useGetEvents } from './Events.hook';
 function EventsContainer({ useModalFn, useGetEventsFn, EventsCmpt }) {
   const { open, handleOpen, handleClose } = useModalFn({});
   const { refetch, data, messageApi } = useGetEventsFn({});
-  console.log(data);
+
   return (
     <EventsCmpt
       messageApi={messageApi}
