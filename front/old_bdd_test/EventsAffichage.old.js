@@ -34,7 +34,6 @@ const events = [
   },
   {
     _id: '6214ac63c89d49420d63987e',
-    status: 'CURRENT',
     endDate: '2043-04-12T16:00:00.000Z',
     startDate: '2020-04-12T16:00:00.000Z',
     description:
