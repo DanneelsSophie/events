@@ -5,7 +5,6 @@ app.get('/events', (req, res) => {
   res.send(
     {
       _id: '6215f977b9d920637815d23a',
-      status: 'CURRENT',
       endDate: '2083-04-12T23:00:00.000Z',
       startDate: '2019-04-12T23:00:00.000Z',
       description:
@@ -14,7 +13,6 @@ app.get('/events', (req, res) => {
     },
     {
       _id: '6215f97db9d920637815d23c',
-      status: 'NEXT',
       endDate: '2040-04-12T23:00:00.000Z',
       startDate: '2030-04-12T23:00:00.000Z',
       description:
@@ -23,7 +21,6 @@ app.get('/events', (req, res) => {
     },
     {
       _id: '6214ac29c89d49420d639878',
-      status: 'PAST',
       endDate: '2013-04-12T16:00:00.000Z',
       startDate: '2012-04-12T16:00:00.000Z',
       description:
@@ -32,7 +29,6 @@ app.get('/events', (req, res) => {
     },
     {
       _id: '6214ac49c89d49420d63987b',
-      status: 'NEXT',
       endDate: '2053-04-12T16:00:00.000Z',
       startDate: '2050-04-12T16:00:00.000Z',
       description:

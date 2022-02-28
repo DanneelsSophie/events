@@ -9,7 +9,6 @@ import App from '../src/App';
 const events = [
   {
     _id: '6214ab5d8b73a80588ed567e',
-    status: 'CURRENT',
     endDate: '2043-04-12T16:00:00.000Z',
     startDate: '2020-04-12T16:00:00.000Z',
     description:
@@ -19,7 +18,6 @@ const events = [
 
   {
     _id: '6214ac29c89d49420d639878',
-    status: 'PAST',
     endDate: '2013-04-12T16:00:00.000Z',
     startDate: '2012-04-12T16:00:00.000Z',
     description:
@@ -28,7 +26,6 @@ const events = [
   },
   {
     _id: '6214ac49c89d49420d63987b',
-    status: 'NEXT',
     endDate: '2053-04-12T16:00:00.000Z',
     startDate: '2050-04-12T16:00:00.000Z',
     description:
