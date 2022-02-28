@@ -4,12 +4,6 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export type EventDocument = Event & Document;
 
-export enum Status {
-  Past = 'PAST',
-  Current = 'CURRENT',
-  Next = 'NEXT',
-}
-
 @Schema()
 export class Event {
   @ApiProperty({
@@ -39,13 +33,6 @@ export class Event {
   })
   @Prop({ required: true })
   endDate: Date;
-
-  @ApiProperty({
-    description: "Le status de l'évènement",
-    enum: ['PAST', 'CURRENT', 'FUTUR'],
-  })
-  @Prop({ required: true, enum: Status })
-  status: Status;
 }
 
 export const EventSchema = SchemaFactory.createForClass(Event);

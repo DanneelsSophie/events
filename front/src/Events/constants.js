@@ -7,6 +7,12 @@ export const STATUS = {
   PAST: { text: 'passé', color: 'secondary' },
 };
 
+export const STATUS_KEY = {
+  CURRENT: 'CURRENT',
+  PAST: 'PAST',
+  NEXT: 'NEXT',
+};
+
 export const API_ERROR_MESSAGE = 'Veuillez contacter le service technique !';
 export const MESSAGE_ERROR =
   "Si vous voyez ce message, veuillez contacter le service technique. L'application n'est pas fonctionnelle";

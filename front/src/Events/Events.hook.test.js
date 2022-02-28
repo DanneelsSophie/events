@@ -1,11 +1,22 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useGetEvents, getEvents, useModal, getMessageApi } from './Events.hook';
+import { useGetEvents, getEvents, useModal, getMessageApi, getStatus } from './Events.hook';
 
 describe('EventsHook', () => {
   describe(' - API', () => {
     describe('useGetEvents', () => {
       const returnedQuery = {
-        data: { events: [{ name: 'Santane' }, { name: 'test' }] },
+        data: [
+          {
+            name: 'Santane',
+            startDate: '2020-04-13T00:00:00.000+08:00',
+            endDate: '2020-04-13T00:00:00.000+08:00',
+          },
+          {
+            name: 'test',
+            startDate: '2020-04-13T00:00:00.000+08:00',
+            endDate: '2020-04-13T00:00:00.000+08:00',
+          },
+        ],
         refetch: () => 'value returned by refetch',
         hasErrors: false,
       };
@@ -16,7 +27,20 @@ describe('EventsHook', () => {
         const res = useGetEvents({ useQueryFn, getMessageApiFn });
         expect(JSON.stringify(res)).toBe(
           JSON.stringify({
-            data: { events: [{ name: 'Santane' }, { name: 'test' }] },
+            data: [
+              {
+                name: 'Santane',
+                startDate: '2020-04-13T00:00:00.000+08:00',
+                endDate: '2020-04-13T00:00:00.000+08:00',
+                status: 'PAST',
+              },
+              {
+                name: 'test',
+                startDate: '2020-04-13T00:00:00.000+08:00',
+                endDate: '2020-04-13T00:00:00.000+08:00',
+                status: 'PAST',
+              },
+            ],
             messageApi: "Une erreur s'est produite",
             refetch: () => 'value returned by refetch',
           }),
@@ -24,13 +48,27 @@ describe('EventsHook', () => {
         expect(res.refetch()).toBe('value returned by refetch');
         expect(useQueryFn).toHaveBeenCalledWith('getEvents', expect.any(Function));
       });
+
       it('should return the message when the getEvents is called with getMessageByDefault', () => {
         const useQueryFn = jest.fn().mockReturnValue(returnedQuery);
 
         const res = useGetEvents({ useQueryFn });
         expect(JSON.stringify(res)).toBe(
           JSON.stringify({
-            data: { events: [{ name: 'Santane' }, { name: 'test' }] },
+            data: [
+              {
+                name: 'Santane',
+                startDate: '2020-04-13T00:00:00.000+08:00',
+                endDate: '2020-04-13T00:00:00.000+08:00',
+                status: 'PAST',
+              },
+              {
+                name: 'test',
+                startDate: '2020-04-13T00:00:00.000+08:00',
+                endDate: '2020-04-13T00:00:00.000+08:00',
+                status: 'PAST',
+              },
+            ],
             messageApi: '',
             refetch: () => 'value returned by refetch',
           }),
@@ -109,5 +147,21 @@ describe('EventsHook', () => {
       act(() => result.current.handleClose());
       expect(result.current.open).toBeFalsy();
     });
+  });
+  describe('getStatus', () => {
+    it.each`
+      startDate                                    | endDate                                      | expected
+      ${new Date('2019-04-15T21:00:00.000+01:00')} | ${new Date('2019-04-15T21:00:00.000+01:00')} | ${'PAST'}
+      ${new Date('2019-04-15T21:00:00.000+01:00')} | ${new Date('2021-04-15T21:00:00.000+01:00')} | ${'CURRENT'}
+      ${new Date('2020-01-02T21:00:00.000+01:00')} | ${new Date('5000-04-15T21:00:00.000+01:00')} | ${'NEXT'}
+    `(
+      'should return $expected when params startDate: $startDate and endDate: $endDate ',
+      ({ startDate, endDate, expected }) => {
+        jest.useFakeTimers().setSystemTime(new Date('2020-01-01').getTime());
+
+        expect(getStatus({ startDate: startDate, endDate: endDate })).toEqual(expected);
+        jest.useRealTimers();
+      },
+    );
   });
 });
