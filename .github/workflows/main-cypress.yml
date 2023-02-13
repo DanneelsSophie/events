@@ -45,6 +45,6 @@ jobs:
           wait-on: 'http://localhost:9002'
           start: npm run start:test
         env:
-          TZ=Europe/Paris 
+          TZ: Europe/Paris 
           
      
