@@ -44,6 +44,7 @@ jobs:
           working-directory: ./front
           wait-on: 'http://localhost:9002'
           start: npm run start:test
-          
+          env:
+            TZ=Europe/Paris 
           
      
