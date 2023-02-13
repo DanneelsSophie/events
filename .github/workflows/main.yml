@@ -39,6 +39,19 @@ jobs:
         working-directory: ./front
         run: npm run cover
         
+      - name: Cypress.io
+         # You may pin to the exact commit or the version.
+         # uses: cypress-io/github-action@ca3f666049f4ac2267a75de769535a7cbdc7bfd7
+        uses: cypress-io/github-action@v5.0.8
+        with:
+          install: false
+          working-directory: ./front
+          wait-on: 'http://localhost:9002'
+          start: npm run start:test
+        env:
+           TZ: Europe/Paris 
+
+        
       - name: Install package back
         working-directory: ./back
         run: npm install
